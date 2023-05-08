@@ -2,8 +2,6 @@
 
 Criação de uma tela de login para site web;
 
-- [ ] Responsividade;
-
 ## :rocket: Tecnologias Utilizadas
 
 - [x] React Hook Form (validação);
