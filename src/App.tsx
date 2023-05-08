@@ -12,7 +12,7 @@ const schema = z.object({
   email: z.string().email('Informe um e-mail válido') ,
   password: z
     .string()
-    .min(6, {message: 'Informe uma senha! Tamanho mínimo 6.'})
+    .min(6, {message: 'Informe uma senha, com no mínimo 6 caracteres.'})
 })
 
 type IFormProps = z.infer<typeof schema>
