@@ -61,7 +61,7 @@ function App() {
                 {...register("email")}
                   type="email"
                   className={clsx(`px-3 py-4 text-gray-800 rounded border border-gray-200 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-purple-500 hover:border-purple-500 transition`, {
-                    'border-red-500 focus:outline-none focus:ring-0 hover:border-red-500': errors.email
+                    'border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-0 hover:border-red-500': errors.email
                   })}
                   placeholder='Digite seu e-mail'
                 />
@@ -85,7 +85,7 @@ function App() {
                   {...register("password")}
                     type={passwordVisible ? 'text': 'password'}
                     className={clsx('w-full px-3 py-4 text-gray-800 rounded border border-gray-200 placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-purple-500 group-hover:border-purple-500 transition', {
-                      'border-red-500 focus:outline-none focus:ring-0 group-hover:border-red-500': errors.password
+                      'border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-0 group-hover:border-red-500': errors.password
                     })}
                     placeholder='Digite sua senha'
                     autoComplete="true"
@@ -93,7 +93,9 @@ function App() {
                   <button 
                     type="button" 
                     onClick={handlePasswordChange} 
-                    className='p-2 rounded flex absolute right-3 focus:outline-none focus:ring-1 focus:ring-purple-500' >
+                    className={clsx('p-2 rounded flex absolute right-3 focus:outline-none focus:ring-1 focus:ring-purple-500', {
+                      'focus:ring-red-500': errors.password?.message
+                    })} >
                       {passwordVisible ?  <Eye/> : <EyeSlash/> }
                   </button>
                 </div>
