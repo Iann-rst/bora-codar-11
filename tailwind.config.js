@@ -21,6 +21,10 @@ export default {
         purple: {
          500: '#7C3AED' 
         }
+      },
+
+      fontFamily: {
+        sans: 'Titillium Web, sans-serif',
       }
     },
   },
