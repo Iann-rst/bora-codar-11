@@ -38,12 +38,12 @@ function App() {
   
     return (
       <div className="w-full h-screen grid grid-cols-2 bg-gray-50">
-        <div className="px-28 py-10">
-          <div>
+        <div className="px-28 py-8">
+          <header>
             <img src={logoImg} alt="Logo: Vertigo" />
-          </div>
+          </header>
 
-          <form className='mt-28 flex flex-col gap-10'>
+          <form className='mt-12 flex flex-col gap-10 pr-20'>
             <header className='flex flex-col gap-4'>
               <h1 className='text-gray-800 font-bold text-4xl'>
                 Acesse a plataforma
@@ -94,7 +94,7 @@ function App() {
                     type="button" 
                     onClick={handlePasswordChange} 
                     className='p-2 rounded flex absolute right-3 focus:outline-none focus:ring-1 focus:ring-purple-500' >
-                      {passwordVisible ?  <EyeSlash/> : <Eye/> }
+                      {passwordVisible ?  <Eye/> : <EyeSlash/> }
                   </button>
                 </div>
                 {errors.password?.message && 
@@ -105,7 +105,7 @@ function App() {
               <button 
                 type='submit'
                 onClick={handleSubmit(handleSubmitForm)}
-                className='mt-4 px-6 py-4 rounded bg-purple-500 text-gray-50 font-bold hover:bg-purple-500/60 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-50  transition'
+                className='mt-4 px-6 py-4 rounded bg-purple-500 text-gray-50 font-bold hover:bg-purple-500/60 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-50 transition duration-200 ease-linear'
               >
                 Entrar
               </button>
